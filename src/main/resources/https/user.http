@@ -1,0 +1,33 @@
+### Create User
+POST localhost:8080/users
+Content-Type: application/json
+
+{
+  "fullName": "Ahror Orzimurodov f",
+  "username": "oa_ahror",
+  "password": "042014",
+  "role": "ADMIN"
+}
+
+### Get All
+GET localhost:8080/users
+Content-Type: application/json
+
+### Get BY Id
+GET localhost:8080/users/2ff8d65d-e71b-407c-b30b-89b27fd367f5
+Content-Type: application/json
+
+### Update
+PUT localhost:8080/users/af3c91d4-492e-4dd1-ac8f-9db6f5222f3c
+Content-Type: application/json
+
+{
+  "fullName": "Ahror Orzimurodov",
+  "role": "CASHIER",
+  "username": "oa_ahror",
+  "status": "INACTIVE"
+}
+
+### Delete
+DELETE localhost:8080/users/2ff8d65d-e71b-407c-b30b-89b27fd367f5
+Content-Type: application/json
