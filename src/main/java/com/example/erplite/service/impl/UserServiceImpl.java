@@ -10,6 +10,7 @@ import com.example.erplite.exp.UsernameAlreadyExistsException;
 import com.example.erplite.repository.UserRepository;
 import com.example.erplite.service.UserService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -21,6 +22,7 @@ import java.util.UUID;
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
     @Override
     public UserResponse create(UserCreateRequest request) {
@@ -32,7 +34,7 @@ public class UserServiceImpl implements UserService {
         User user = new User();
         user.setFullName(request.getFullName());
         user.setUsername(request.getUsername());
-        user.setPassword(request.getPassword());
+        user.setPassword(passwordEncoder.encode(request.getPassword()));
         user.setRole(request.getRole());
         user.setStatus(UserStatus.ACTIVE);
 
