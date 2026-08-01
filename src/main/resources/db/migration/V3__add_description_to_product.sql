@@ -1,0 +1,6 @@
+ALTER TABLE products
+    ADD COLUMN description VARCHAR(1000);
+
+ALTER TABLE products
+ALTER COLUMN name TYPE VARCHAR(150);
+

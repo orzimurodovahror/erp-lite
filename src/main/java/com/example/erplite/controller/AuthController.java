@@ -5,6 +5,7 @@ import com.example.erplite.dto.auth.LoginResponse;
 import com.example.erplite.service.AuthService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

@@ -9,6 +9,21 @@ Content-Type: application/json
   "role": "ADMIN"
 }
 
+### Create User
+POST localhost:8080/users
+Content-Type: application/json
+
+{
+  "fullName": "Jafar Norboyev",
+  "username": "theomen",
+  "password": "121212",
+  "role": "ADMIN"
+}
+
+
+
+
+
 ### Get All
 GET localhost:8080/users
 Content-Type: application/json
