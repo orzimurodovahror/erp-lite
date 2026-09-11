@@ -1,11 +1,12 @@
 ### Create User
 POST localhost:8080/users
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc4NTg3MDM4OCwiZXhwIjoxNzg1OTU2Nzg4fQ.4sT0Q_iaTqPxpzsTRa15RlJ8tcLFmbc-k8057Z8fzXc
 
 {
-  "fullName": "Ahror Orzimurodov f",
-  "username": "oa_ahror",
-  "password": "042014",
+  "fullName": "Jafar Norboyev",
+  "username": "jafer",
+  "password": "121212",
   "role": "ADMIN"
 }
 
@@ -19,9 +20,6 @@ Content-Type: application/json
   "password": "121212",
   "role": "ADMIN"
 }
-
-
-
 
 
 ### Get All

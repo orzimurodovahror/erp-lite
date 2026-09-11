@@ -1,8 +1,10 @@
 package com.example.erplite.service.impl;
 
+import com.example.erplite.dto.product.ProductResponse;
 import com.example.erplite.dto.user.UserCreateRequest;
 import com.example.erplite.dto.user.UserResponse;
 import com.example.erplite.dto.user.UserUpdateRequest;
+import com.example.erplite.entity.Product;
 import com.example.erplite.entity.User;
 import com.example.erplite.enums.UserStatus;
 import com.example.erplite.exp.UserNotFoundException;
@@ -40,15 +42,8 @@ public class UserServiceImpl implements UserService {
 
         User savedUser = userRepository.save(user);
 
-        UserResponse response = new UserResponse();
-        response.setId(savedUser.getId());
-        response.setFullName(savedUser.getFullName());
-        response.setUsername(savedUser.getUsername());
-        response.setRole(savedUser.getRole());
-        response.setStatus(savedUser.getStatus());
-        response.setCreatedAt(savedUser.getCreatedAt());
 
-        return response;
+        return toResponse(savedUser);
 
     }
 
@@ -60,21 +55,10 @@ public class UserServiceImpl implements UserService {
         List<UserResponse> responseList = new ArrayList<>();
 
         for (User user : users) {
-
-            UserResponse response = new UserResponse();
-
-            response.setId(user.getId());
-            response.setFullName(user.getFullName());
-            response.setUsername(user.getUsername());
-            response.setRole(user.getRole());
-            response.setStatus(user.getStatus());
-            response.setCreatedAt(user.getCreatedAt());
-
-            responseList.add(response);
+            responseList.add(toResponse(user));
         }
 
         return responseList;
-
     }
 
     @Override
@@ -82,17 +66,7 @@ public class UserServiceImpl implements UserService {
 
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new UserNotFoundException("User not found"));
-
-        UserResponse response = new UserResponse();
-
-        response.setId(user.getId());
-        response.setFullName(user.getFullName());
-        response.setUsername(user.getUsername());
-        response.setRole(user.getRole());
-        response.setStatus(user.getStatus());
-        response.setCreatedAt(user.getCreatedAt());
-
-        return response;
+        return toResponse(user);
     }
 
     @Override
@@ -107,16 +81,7 @@ public class UserServiceImpl implements UserService {
 
         User updatedUser = userRepository.save(user);
 
-        UserResponse response = new UserResponse();
-
-        response.setId(updatedUser.getId());
-        response.setFullName(updatedUser.getFullName());
-        response.setUsername(updatedUser.getUsername());
-        response.setRole(updatedUser.getRole());
-        response.setStatus(updatedUser.getStatus());
-        response.setCreatedAt(updatedUser.getCreatedAt());
-
-        return response;
+        return toResponse(updatedUser);
 
     }
     @Override
@@ -127,5 +92,19 @@ public class UserServiceImpl implements UserService {
         );
     }
 
+    private UserResponse toResponse(User user) {
+
+        UserResponse response = new UserResponse();
+
+        response.setId(user.getId());
+        response.setFullName(user.getFullName());
+        response.setUsername(user.getUsername());
+        response.setRole(user.getRole());
+        response.setStatus(user.getStatus());
+        response.setCreatedAt(user.getCreatedAt());
+
+
+        return response;
+    }
 
 }

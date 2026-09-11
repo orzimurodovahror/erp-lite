@@ -21,19 +21,25 @@ public class AuthServiceImpl implements AuthService {
     @Override
     public LoginResponse login(LoginRequest request) {
 
-        Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(
-                        request.getUsername(),
-                        request.getPassword()
-                )
-        );
+        try {
+            Authentication authentication = authenticationManager.authenticate(
+                    new UsernamePasswordAuthenticationToken(
+                            request.getUsername(),
+                            request.getPassword()
+                    )
+            );
 
-        CustomUserDetails userDetails =
-                (CustomUserDetails) authentication.getPrincipal();
+            CustomUserDetails userDetails =
+                    (CustomUserDetails) authentication.getPrincipal();
 
-        String token = jwtService.generateToken(userDetails);
+            String token = jwtService.generateToken(userDetails);
 
-        return new LoginResponse(token);
+            return new LoginResponse(token);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
+        }
     }
 
 }

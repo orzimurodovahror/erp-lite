@@ -1,0 +1,68 @@
+### ===========================
+### Create Product
+### ===========================
+
+POST localhost:8080/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc4ODEwOTM3NiwiZXhwIjoxNzg4MTk1Nzc2fQ.bfERJ2_3_6gvmP28wqeSUfDRHKrT-7YhchpH7IzSlDc
+Content-Type: application/json
+
+{
+  "barcode": "200341",
+  "name": "Guruch",
+  "description": "Lazer guruch",
+  "buyPrice": 15000,
+  "sellPrice": 20000,
+  "minStock": 5
+}
+
+### ===========================
+### Get By Id
+### ===========================
+
+GET localhost:8080/products/6ddb0800-03d1-4bd6-9f95-5b2661b99641
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc4ODEwOTM3NiwiZXhwIjoxNzg4MTk1Nzc2fQ.bfERJ2_3_6gvmP28wqeSUfDRHKrT-7YhchpH7IzSlDc
+Content-Type: application/json
+
+### ===========================
+### Get All
+### ===========================
+
+GET localhost:8080/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc4ODg5MDY1MSwiZXhwIjoxNzg4OTc3MDUxfQ.ExMQ6_Pjc5GgzyeQNiqOEUmaxJ5vddcjZqdWLGwVZVA
+Content-Type: application/json
+
+### ===========================
+### Update
+### ===========================
+
+PUT localhost:8080/products/6ddb0800-03d1-4bd6-9f95-5b2661b99641
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc4ODg5MDY1MSwiZXhwIjoxNzg4OTc3MDUxfQ.ExMQ6_Pjc5GgzyeQNiqOEUmaxJ5vddcjZqdWLGwVZVA
+Content-Type: application/json
+
+{
+  "name": "Coca cola",
+  "barcode": "212212",
+  "buyPrice": 12250.00,
+  "sellPrice": 14000.00,
+  "description": " Coco cola 1.5l",
+  "minStock": 5
+
+}
+
+### ===========================
+### Delete
+### ===========================
+DELETE localhost:8080/products/6ddb0800-03d1-4bd6-9f95-5b2661b99641
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc4ODg5MDY1MSwiZXhwIjoxNzg4OTc3MDUxfQ.ExMQ6_Pjc5GgzyeQNiqOEUmaxJ5vddcjZqdWLGwVZVA
+Content-Type: application/json
+
+
+
+
+
+
+
+
+
+
+
