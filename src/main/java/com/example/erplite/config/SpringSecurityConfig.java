@@ -36,9 +36,9 @@ public class SpringSecurityConfig {
                 )
 
 
-                .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
+                .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
 
-                .httpBasic(Customizer.withDefaults());
+//                .httpBasic(Customizer.withDefaults());
 
         return http.build();
     }

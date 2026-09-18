@@ -1,0 +1,21 @@
+POST localhost:8080/stock-movements
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc4OTc1NTYwNCwiZXhwIjoxNzg5ODQyMDA0fQ.Gb6vluBvh6x2ZN3fivRqulQZRB9rlzHWfLvLoQt4xh0
+
+{
+  "productId": "831c9772-03aa-43bb-9d2d-4876d389661e",
+  "movementType": "PURCHASE",
+  "quantity": 34,
+  "unitCost": 9800
+  }
+
+### GETALL
+GET localhost:8080/stock-movements
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc4OTc1NTYwNCwiZXhwIjoxNzg5ODQyMDA0fQ.Gb6vluBvh6x2ZN3fivRqulQZRB9rlzHWfLvLoQt4xh0
+
+
+### Get by product
+GET localhost:8080/stock-movements/product/831c9772-03aa-43bb-9d2d-4876d389661e
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc4OTc1NTYwNCwiZXhwIjoxNzg5ODQyMDA0fQ.Gb6vluBvh6x2ZN3fivRqulQZRB9rlzHWfLvLoQt4xh0

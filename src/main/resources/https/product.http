@@ -28,7 +28,7 @@ Content-Type: application/json
 ### ===========================
 
 GET localhost:8080/products
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc4ODg5MDY1MSwiZXhwIjoxNzg4OTc3MDUxfQ.ExMQ6_Pjc5GgzyeQNiqOEUmaxJ5vddcjZqdWLGwVZVA
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc4OTc1NDA4OCwiZXhwIjoxNzg5ODQwNDg4fQ.88nVb7jAurgZNFVrS7DhIFVaxC1btlOc9eYhrVyzi9M
 Content-Type: application/json
 
 ### ===========================
