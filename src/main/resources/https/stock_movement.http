@@ -12,7 +12,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc4OTc1N
 ### GETALL
 GET localhost:8080/stock-movements
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc4OTc1NTYwNCwiZXhwIjoxNzg5ODQyMDA0fQ.Gb6vluBvh6x2ZN3fivRqulQZRB9rlzHWfLvLoQt4xh0
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc5MDAxOTU2MSwiZXhwIjoxNzkwMTA1OTYxfQ.KWRlPxc8vyoUZzPfoBgOEdggi24NZg0V115Xq09Oiiw
 
 
 ### Get by product
